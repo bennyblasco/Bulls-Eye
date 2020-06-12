@@ -16,22 +16,60 @@ struct ContentView: View {
     @State var score = 0
     @State var round = 1
     
+    let modifiedaccentColor = Color(red: 0.5/255, green: 51.0/255, blue: 102.0/255)
+    
+    struct LabelStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+            .foregroundColor(Color.white)
+            .modifier(Shadow())
+            .font(Font.custom("Arial Rounded MT Bold", size: 18))
+        }
+    }
+    struct ValueStyle: ViewModifier{
+        func body(content: Content) -> some View {
+            content
+            .foregroundColor(Color.yellow)
+            .modifier(Shadow())
+            .font(Font.custom("Arial Rounded MT Bold", size: 24))
+        }
+    }
+    struct Shadow: ViewModifier{
+        func body(content: Content) -> some View {
+            content
+            .shadow(color: Color.black, radius: 5, x: 2, y: 2 )
+        }
+    }
+    struct ButtonLarge: ViewModifier{
+        func body(content: Content) -> some View {
+            content
+            .foregroundColor(Color.black)
+            .font(Font.custom("Arial Rounded MT Bold", size: 20))
+        }
+    }
+    
+    struct ButtonSmall: ViewModifier{
+        func body(content: Content) -> some View {
+            content
+            .foregroundColor(Color.black)
+            .font(Font.custom("Arial Rounded MT Bold", size: 12))
+        }
+    }
     var body: some View{
         VStack{
             Spacer()
             //Target row
             HStack {
-                Text("Slide as close as you can to:")
-                Text("\(self.target)")
-                
+                Text("Slide as close as you can to:").modifier(LabelStyle())
+                Text("\(self.target)").modifier(ValueStyle())
             }
             Spacer()
             //Slider row
             
             HStack{
-                Text("1")
-                Slider(value: self.$sliderValue, in: 1...100)
-                Text("100")
+                Text("1").modifier(LabelStyle())
+                Slider(value: self.$sliderValue, in: 1...100).accentColor(Color.red)
+                Text("100").modifier(LabelStyle())
             }
             Spacer()
             
@@ -41,8 +79,10 @@ struct ContentView: View {
                 self.alertIsVisible = true
                 //self.score = self.score + self.pointsForCurrentRound()
             }){
-                Text("Hit me!")
+                Text("Hit me!").modifier(ButtonLarge())
+                
             }
+            .background(Image("Button")).modifier(Shadow())
             Spacer()
                 
                 .alert(isPresented: $alertIsVisible) { () -> Alert in
@@ -54,28 +94,40 @@ struct ContentView: View {
                         })
                     
             }
+            
             Spacer()
             //Score row
             HStack{
                 Button(action: {
                     self.startNewGame()
                 }) {
-                    Text("Start Over")
+                    HStack{
+                        Image("StartOverIcon")
+                        Text("Start Over").modifier(ButtonSmall())
+                    }
                 }
+                .background(Image("Button")).modifier(Shadow())
                 Spacer()
-                Text("Score:")
-                Text("\(score)")
+                Text("Score:").modifier(LabelStyle())
+                Text("\(score)").modifier(ValueStyle())
+
                 Spacer()
-                Text("Round:")
-                Text("\(round)")
+                Text("Round:").modifier(LabelStyle())
+                Text("\(round)").modifier(ValueStyle())
+
                 Spacer()
                 Button(action: {}) {
-                    Text("Info")
+                    HStack{
+                        Image("InfoIcon")
+                        Text("Info").modifier(ButtonSmall())
+                    }
                 }
+                .background(Image("Button")).modifier(Shadow())
             }
             .padding(.bottom, 20)
-            
         }
+        .background(Image("Background"), alignment: .center)
+        .accentColor(modifiedaccentColor)
     }
     
     func sliderValueRounded() -> Int{
