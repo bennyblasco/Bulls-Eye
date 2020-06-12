@@ -11,6 +11,7 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         VStack{
+        Spacer()
         Text("🎯Bulls Eye 🎯")
         Text("Bulls Eye is a game where you win points by being precise with sliding to the random number")
         Text("Hit to check your score")
@@ -19,6 +20,8 @@ struct AboutView: View {
         Spacer()
         Text("Created Benjamin Inemugha")
         }
+        .navigationBarTitle("About Bulls Eye")
+        .background(Image("Background"), alignment: .center)
     }
 }
 
