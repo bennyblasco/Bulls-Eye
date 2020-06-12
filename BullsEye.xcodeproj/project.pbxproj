@@ -447,6 +447,7 @@
 				DEVELOPMENT_TEAM = 268W7E23V8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +468,7 @@
 				DEVELOPMENT_TEAM = 268W7E23V8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
