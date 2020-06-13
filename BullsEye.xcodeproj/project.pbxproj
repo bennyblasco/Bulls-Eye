@@ -16,6 +16,7 @@
 		18A7FDE32489700A008D40AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A7FDE12489700A008D40AE /* LaunchScreen.storyboard */; };
 		18A7FDEE2489700A008D40AE /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7FDED2489700A008D40AE /* BullsEyeTests.swift */; };
 		18A7FDF92489700A008D40AE /* BullsEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7FDF82489700A008D40AE /* BullsEyeUITests.swift */; };
+		18FF18AE2493BCA700F32BF9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF18AD2493BCA600F32BF9 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		18A7FDF42489700A008D40AE /* BullsEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A7FDF82489700A008D40AE /* BullsEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeUITests.swift; sourceTree = "<group>"; };
 		18A7FDFA2489700A008D40AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FF18AD2493BCA600F32BF9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				18A7FDD324897007008D40AE /* AppDelegate.swift */,
 				18A7FDD524897007008D40AE /* SceneDelegate.swift */,
 				18A7FDDA24897007008D40AE /* ContentView.swift */,
+				18FF18AD2493BCA600F32BF9 /* AboutView.swift */,
 				18A7FDDC2489700A008D40AE /* Assets.xcassets */,
 				18A7FDE12489700A008D40AE /* LaunchScreen.storyboard */,
 				18A7FDE42489700A008D40AE /* Info.plist */,
@@ -274,6 +277,7 @@
 				18A7FDD424897007008D40AE /* AppDelegate.swift in Sources */,
 				18A7FDDB24897007008D40AE /* ContentView.swift in Sources */,
 				18A7FDD624897007008D40AE /* SceneDelegate.swift in Sources */,
+				18FF18AE2493BCA700F32BF9 /* AboutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +447,7 @@
 				DEVELOPMENT_TEAM = 268W7E23V8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,6 +468,7 @@
 				DEVELOPMENT_TEAM = 268W7E23V8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
